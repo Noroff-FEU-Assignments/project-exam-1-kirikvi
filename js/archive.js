@@ -1,5 +1,5 @@
 const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts";
-const indexContent = document.querySelector(".index-content");
+const archive = document.querySelector(".archive");
 
 async function fetchPosts(){
     try {
@@ -10,8 +10,8 @@ async function fetchPosts(){
         for(let i = 0; i < results.length; i++) {
             console.log(results[i]);
        
-        indexContent.innerHTML += `
-        <div class="index-item">
+        archive.innerHTML += `
+        <div>
             <h1>${results[i].title.rendered}</h1>
             <p>${results[i].date}</p>
             <p>${results[i].content.rendered}</p>
@@ -22,7 +22,7 @@ async function fetchPosts(){
 
     catch(error){
         console.log(error);
-        indexContent.innerHTML = `
+        archive.innerHTML = `
         <h1>Failed to load blog. Please try again later</h1>
         <p class="signature">John Doe</p>`;
     }

@@ -1,4 +1,5 @@
 /* 
+FONTS----
 font-family: objektiv-mk2, sans-serif;
 font-weight: 300;
 font-style: normal;
@@ -10,5 +11,111 @@ font-style: normal;
 font-family: viktor-script, sans-serif;
 font-weight: 400;
 font-style: normal;
+
+font-family: mongoose,sans-serif;
+font-weight: 400;
+font-style: normal;
+
+------------------------------------------
+
+COLOURS----
+Almost white = #f7f7f7;
+Light gray = #EFEFEF;
+Sand = #c8c7c2;
+Dark gray/brown = #3A403B;
+Light green/teal = #9fbfaf;
+-------------------------------------------
 */
+
+body{
+    background-color: #EFEFEF;
+    margin: 0;
+    line-height: 1.5;
+}
+
+footer{
+    background-color: #3A403B;
+}
+
+/*FONTS SIZES COLOURS*/
+h1,
+h2 {
+    font-family: "objektiv-mk2", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+}
+
+h1 {
+    font-size: 40pt;  
+}
+
+h2 {
+    font-size: 33pt;  
+}
+
+p,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "noto-sans-cjk-kr", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem; 
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    font-size: 22pt; 
+}
+
+.logo,
+.signature {
+    font-family: "viktor-script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5rem;
+    text-transform: none;
+}
+
+.signature {
+    font-size: 30pt;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3A403B;
+}
+
+header li {
+    font-family: "mongoose", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    display: inline;
+    font-size: 2.5rem;
+    padding: 20px;
+}
+
+/*HEADER--------------------------*/
+header ul {
+    margin: auto;
+    text-align: center;
+}
+
+/*FOOTER-----------------------------------------*/
+footer p {
+    text-align: right;
+    color: #EFEFEF;
+    padding: 25px;
+}
 
