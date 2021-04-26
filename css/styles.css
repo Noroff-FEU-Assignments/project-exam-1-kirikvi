@@ -110,6 +110,7 @@ header li {
 header ul {
     margin: auto;
     text-align: center;
+    padding-left: 0;
 }
 
 /*FOOTER-----------------------------------------*/
