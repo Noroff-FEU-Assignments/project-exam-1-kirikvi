@@ -14,7 +14,7 @@ async function createPost(){
         const postResult = await search.json();
         console.log(postResult);
 
-        title.innerHTML = postResult.title.rendered;
+        title.innerHTML = "KoN | " + postResult.title.rendered;
 
         postContainer.innerHTML = `
             <div>

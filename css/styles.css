@@ -27,6 +27,20 @@ Light green/teal = #9fbfaf;
 -------------------------------------------
 */
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
 body{
     background-color: #EFEFEF;
     margin: 0;
@@ -165,6 +179,7 @@ footer p {
     "carousel carousel";
 }
 
+.archive-item,
 .index-post,
 .index-journey,
 .index-latest,
@@ -202,3 +217,26 @@ footer p {
 
 /*ARCHIVE---------------------------------------------------------------*/
 
+.archive-item p {
+    padding: 0;
+    display: none;
+}
+
+.date {
+    display: block;
+}
+
+.archive-item {
+    max-height: 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-content: center;
+}
+
+.archive-item img {
+    height: 250px;
+    max-width: 200px;
+    object-fit: cover;
+}
