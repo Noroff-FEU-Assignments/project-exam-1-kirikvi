@@ -33,6 +33,11 @@ body{
     line-height: 1.5;
 }
 
+main {
+    max-width: 90%;
+    margin: auto;
+}
+
 footer{
     background-color: #3A403B;
 }
@@ -53,6 +58,7 @@ h2 {
     font-size: 1.5rem;  
 }
 
+a,
 p,
 h3,
 h4,
@@ -62,6 +68,7 @@ h6 {
     font-weight: 300;
     font-style: normal;
     font-size: 1rem; 
+    text-decoration: none;
 }
 
 h3,
@@ -135,7 +142,7 @@ footer p {
 }
 
 
-/*INDEX PAGE --------------------------*/
+/*INDEX PAGE ------------------------------------------------------*/
 /*GRID*/
 
 .index-post{
@@ -152,8 +159,6 @@ footer p {
 }
 
 .index-content {
-    max-width: 90%;
-    margin: auto;
     display: grid;
     grid-template-areas: 
     "post journey"
@@ -179,3 +184,22 @@ footer p {
     object-fit: cover;
     
 }
+
+/* CAROUSEL */
+.index-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.carousel-item p {
+    display: none;
+}
+
+.carousel-item img {
+    max-width: 100px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+/*ARCHIVE---------------------------------------------------------------*/
+

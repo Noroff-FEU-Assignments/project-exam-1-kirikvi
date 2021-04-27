@@ -11,12 +11,11 @@ async function fetchPosts(){
             console.log(results[i]);
        
         archive.innerHTML += `
-        <div>
+        <a href="post.html?id=${results[i].id}" class="archive-item">
             <h1>${results[i].title.rendered}</h1>
             <p>${results[i].date}</p>
             <p>${results[i].content.rendered}</p>
-            <p class="signature">John Doe</p>
-        </div>`;
+        </a>`;
         }
     }
 
