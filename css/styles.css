@@ -46,11 +46,11 @@ h2 {
 }
 
 h1 {
-    font-size: 40pt;  
+    font-size: 1.8rem;  
 }
 
 h2 {
-    font-size: 33pt;  
+    font-size: 1.5rem;  
 }
 
 p,
@@ -69,7 +69,7 @@ h4,
 h5,
 h6 {
     font-weight: 500;
-    font-size: 22pt; 
+    font-size: 1.1rem; 
 }
 
 .logo,
@@ -85,6 +85,7 @@ h6 {
     font-size: 30pt;
 }
 
+a,
 p,
 li,
 h1,
@@ -103,10 +104,23 @@ header li {
     text-transform: uppercase;
     display: inline;
     font-size: 2.5rem;
-    padding: 20px;
+    padding: 25px 40px;
 }
 
 /*HEADER--------------------------*/
+header li a{
+    text-decoration: none;
+}
+
+header li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #9fbfaf;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
 header ul {
     margin: auto;
     text-align: center;
@@ -120,3 +134,48 @@ footer p {
     padding: 25px;
 }
 
+
+/*INDEX PAGE --------------------------*/
+/*GRID*/
+
+.index-post{
+    grid-area: post;
+}
+.index-journey{
+    grid-area: journey;
+}
+.index-latest{
+    grid-area: latest;
+}
+.index-carousel{
+    grid-area: carousel;
+}
+
+.index-content {
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "post journey"
+    "post latest"
+    "carousel carousel";
+}
+
+.index-post,
+.index-journey,
+.index-latest,
+.index-carousel{
+ background-color: #f7f7f7;
+ padding: 30px;
+ margin: 10px;   
+}
+
+.index-post{
+    padding: 50px;
+}
+
+.index-post img{
+    max-height: 300px;
+    object-fit: cover;
+    
+}

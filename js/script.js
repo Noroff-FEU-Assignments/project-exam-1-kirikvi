@@ -1,5 +1,5 @@
 const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts";
-const indexContent = document.querySelector(".index-content");
+const indexContent = document.querySelector(".index-post");
 
 async function fetchPosts(){
     try {
@@ -9,14 +9,18 @@ async function fetchPosts(){
 
         for(let i = 0; i < results.length; i++) {
             console.log(results[i]);
+
+            if(i === 1){
+                break;
+            }
        
-        indexContent.innerHTML += `
-        <div class="index-item">
-            <h1>${results[i].title.rendered}</h1>
-            <p>${results[i].date}</p>
-            <p>${results[i].content.rendered}</p>
-            <p class="signature">John Doe</p>
-        </div>`;
+            indexContent.innerHTML += `
+            <div class="index-item">
+                <h1>${results[i].title.rendered}</h1>
+                <p>${results[i].date}</p>
+                <p>${results[i].content.rendered}</p>
+                <p class="signature">John Doe</p>
+            </div>`;
         }
     }
 
