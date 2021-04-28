@@ -249,14 +249,17 @@ footer p {
     max-height: 250px;
     overflow: hidden;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
-    align-content: center;
+    padding: 10px;
+}
+
+.archive-item:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;  
 }
 
 .archive-item img {
-    height: 300px;
-    width: 200px;
+    max-height: 190px;
+    max-width: 400px;
     object-fit: cover;
 }
 
