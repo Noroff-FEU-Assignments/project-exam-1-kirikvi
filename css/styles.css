@@ -56,6 +56,20 @@ footer{
     background-color: #3A403B;
 }
 
+button {
+    background-color: #3A403B;
+    color:#EFEFEF;
+    border: none;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color:#c8c7c2;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+
 /*FONTS SIZES COLOURS*/
 h1,
 h2 {
@@ -76,7 +90,10 @@ p,
 h3,
 h4,
 h5,
-h6 {
+h6,
+input,
+textarea,
+button {
     font-family: "noto-sans-cjk-kr", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -97,7 +114,7 @@ h6 {
     font-family: "viktor-script", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 4.5rem;
+    font-size: 5rem;
     text-transform: none;
 }
 
@@ -132,7 +149,8 @@ header li a{
     text-decoration: none;
 }
 
-header li a:hover {
+header li a:hover,
+.current {
     text-decoration: underline;
     text-decoration-color: #9fbfaf;
 }
@@ -142,7 +160,7 @@ header li a:hover {
 }
 
 header ul {
-    margin: auto;
+    margin: 10px auto 40px;
     text-align: center;
     padding-left: 0;
 }
@@ -179,6 +197,7 @@ footer p {
     "carousel carousel";
 }
 
+.post-content,
 .archive-item,
 .index-post,
 .index-journey,
@@ -193,10 +212,10 @@ footer p {
     padding: 50px;
 }
 
+.post-content img,
 .index-post img{
     max-height: 300px;
     object-fit: cover;
-    
 }
 
 /* CAROUSEL */
@@ -236,7 +255,55 @@ footer p {
 }
 
 .archive-item img {
-    height: 250px;
-    max-width: 200px;
+    height: 300px;
+    width: 200px;
     object-fit: cover;
+}
+
+.button-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/*BLOG POST-------------------------*/
+.post-content {
+    padding: 20px 80px;
+}
+
+.prev-next {
+    text-align: center;
+    margin: 20px;
+}
+
+.prev-next button {
+    margin: 0 20px;
+    width: 200px;
+}
+
+.comment-container,
+.contact-form-container {
+    background-color: #c8c7c2;
+    padding: 20px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+.contact-form h2,
+.message-form input,
+.message-form textarea,
+.message-form button,
+.comment-container h2{
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+.contact-form button:hover,
+.message-form button:hover {
+    background-color: #3A403B;
+    color:#c8c7c2;
 }

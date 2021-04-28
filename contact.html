@@ -43,15 +43,28 @@
                 <li class="logo"><a href="index.html">Kingdom of Norway</a></li>
                 <li><a href="archive.html">Archive</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="current">Contact</a></li>
                 <li>Search</li>
             </ul>    
         </nav>  
    </header>
 
-   <main>  
-        <div class="contact-content">
-        </div>  
+   <main>
+        <div>
+            <div class="contact-content">
+            </div>  
+            
+            <div class="contact-form-container">
+                <h2>Send me a message</h2>
+                <form class="contact-form">
+                    <input type="text" name="name" id="name" placeholder="Name or nickname">
+                    <input type="email" name="email" id="e-mail" placeholder="Your email address">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="message" type="text" id="message" placeholder="Write your message here"></textarea>
+                    <button class="message-submit">Submit</button>         
+                </form>  
+            </div>
+        </div> 
    </main>
     
    <footer>
