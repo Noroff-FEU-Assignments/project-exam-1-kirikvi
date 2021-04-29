@@ -119,7 +119,7 @@ h6 {
 }
 
 .signature {
-    font-size: 30pt;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -186,16 +186,12 @@ footer p {
 .index-latest{
     grid-area: latest;
 }
-.index-carousel{
-    grid-area: carousel;
-}
 
 .index-content {
     display: grid;
     grid-template-areas: 
     "post journey"
-    "post latest"
-    "carousel carousel";
+    "post latest";
 }
 
 .post-content,
@@ -219,10 +215,35 @@ footer p {
     object-fit: cover;
 }
 
+/* WELCOME*/
+.index-journey {
+    max-width: 320px;
+}
+
 /* CAROUSEL */
-.index-carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.latest-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-item {
+    border: 2px solid #efefef;
+    border-radius: 3px;
+    max-width: 200px;
+    margin: 10px auto;
+}
+
+.carousel-item h3,
+.carousel-item a,
+i {
+    text-align: center;
+}
+
+i {
+    margin: auto;
+    font-size: 3rem;
+    color: #3A403B;
+    padding: 20px;
 }
 
 .carousel-item p {
@@ -230,7 +251,6 @@ footer p {
 }
 
 .carousel-item img {
-    max-width: 100px;
     max-height: 150px;
     object-fit: cover;
 }
@@ -253,7 +273,8 @@ footer p {
     padding: 10px;
 }
 
-.archive-item:hover {
+.archive-item:hover,
+.carousel-item:hover {
     transform: scale(1.05);
     transition: 0.5s ease-in-out;  
 }
@@ -310,4 +331,100 @@ footer p {
 .message-form button:hover {
     background-color: #3A403B;
     color:#c8c7c2;
+}
+
+/*CONTACT*/
+
+.form-item input,
+.form-item textarea {
+	border: 2px solid #f7f7f7;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+	outline: 0;
+	border-color: #3A403B;
+}
+
+.form-item.success input,
+.form-item.success textarea {
+	border-color: #2abb66;
+}
+
+.form-item.error input,
+.form-item.error textarea {
+	border-color: #e74c3c;
+}
+
+.form-item p,
+.form-item small {
+    display: inline;
+}
+
+.form-item small {
+	color: #e74c3c;
+	visibility: hidden;
+}
+
+.form-item.error small {
+	visibility: visible;
+}
+
+
+@media screen and (max-width: 885px) {
+    .index-content {
+        grid-template-areas: 
+        "journey"
+        "post"
+        "latest";
+    }
+
+    .index-journey {
+        max-width: 100%;
+    }
+
+    .latest-item {
+        flex-direction: row;
+    }
+
+    header li {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+
+    .logo,
+    .signature {
+    font-family: "viktor-script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.7rem;
+    text-transform: none;
+    }
+    
+    .signature {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;  
+    }
+
+    h2 {
+        font-size: 1.2rem;  
+    }
+
+    p,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    textarea,
+    button {
+        font-size: .8rem; 
+    }
 }

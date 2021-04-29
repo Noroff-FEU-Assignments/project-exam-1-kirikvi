@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".index-carousel");
+const carousel = document.querySelector(".latest-item");
 
 async function getPosts(){
     try {
@@ -16,11 +16,12 @@ async function getPosts(){
             }
        
             carousel.innerHTML += `
-            <div class="carousel-item">
-                <h1>${posts[i].title.rendered}</h1>
-                <p>${posts[i].date}</p>
-                <p>${posts[i].content.rendered}</p>
-            </div>`;
+            <a href="post.html?id=${posts[i].id}">
+                <div class="carousel-item">
+                    <p>${posts[i].content.rendered}</p>
+                    <h3>${posts[i].title.rendered}</h3>
+                </div>
+            </a>`;
         }
     }
 

@@ -37,3 +37,33 @@ async function fetchPosts(){
 }
 fetchPosts()
 
+// Welcome to my blog
+
+const welcomeUrl = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/pages/278";
+const welcome = document.querySelector(".index-journey");
+
+async function fetchWelcome(){
+    try {
+        const find = await fetch(welcomeUrl);
+        const welcomeContent = await find.json();
+        console.log(welcomeContent);    
+       
+        welcome.innerHTML += `
+        <div>
+            <p>${welcomeContent.content.rendered}</p>
+            <p class="signature">John Doe</p>
+        </div>`;
+    }
+
+    catch(error){
+        console.log(error);
+        aboutContent.innerHTML = `
+        <h1>Something went wrong. Please try again later</h1>
+        <p class="signature">John Doe</p>`;
+    }
+
+    finally{
+        console.log("finally");
+    }
+}
+fetchWelcome()
