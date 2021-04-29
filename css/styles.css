@@ -45,6 +45,8 @@ body{
     background-color: #EFEFEF;
     margin: 0;
     line-height: 1.5;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 main {
@@ -255,6 +257,14 @@ i {
     object-fit: cover;
 }
 
+.index-latest{
+    text-align: center;
+}
+
+
+.index-latest h2{
+    text-align:left;
+}
 /*ARCHIVE---------------------------------------------------------------*/
 
 .archive-item p {
@@ -281,7 +291,7 @@ i {
 
 .archive-item img {
     max-height: 190px;
-    max-width: 400px;
+    max-width: 450px;
     object-fit: cover;
 }
 
@@ -376,21 +386,7 @@ i {
 
 
 @media screen and (max-width: 885px) {
-    .index-content {
-        grid-template-areas: 
-        "journey"
-        "post"
-        "latest";
-    }
-
-    .index-journey {
-        max-width: 100%;
-    }
-
-    .latest-item {
-        flex-direction: row;
-    }
-
+/*GENERAL STYLES-----------------------------------------------*/
     header li {
         font-size: 1.8rem;
         padding: 15px;
@@ -427,4 +423,57 @@ i {
     button {
         font-size: .8rem; 
     }
+
+/*INDEX -------------------------------------*/
+    .index-content {
+        grid-template-areas: 
+        "journey"
+        "post"
+        "latest";
+    }
+
+    .index-journey {
+        max-width: 100%;
+    }
+
+    /* CAROUSEL */
+
+    .carousel-item {
+        max-width: 100%;
+        max-height: 200px;
+        margin: 10px auto;
+    }
+
+    i {
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .carousel-item img {
+        max-height: 100px;
+        max-width: 100%;
+        object-fit: cover;
+        margin: auto;
+    }
+
+/*ARCHIVE------------------------------*/
+    .archive-item {
+        max-height: 400px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .archive-item:hover,
+    .carousel-item:hover {
+        transform: scale(1.05);
+        transition: 0.5s ease-in-out;  
+    }
+
+    .archive-item img {
+        max-width: 100%;
+    }
+
+
 }
