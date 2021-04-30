@@ -196,6 +196,7 @@ footer p {
     "post latest";
 }
 
+.contact-background,
 .about-content,
 .post-content,
 .archive-item,
@@ -509,5 +510,9 @@ i {
         max-width: 100%;
     }
 
+/*BLOG POST ------------------------------------*/
+    .post-content {
+        padding: 20px;
+    }    
 
 }
