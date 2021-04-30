@@ -14,7 +14,7 @@ async function fetchPosts(){
         <a href="post.html?id=${results[i].id}">
             <div class="archive-item">
                 <p>${results[i].content.rendered}</p>
-                <h1>${results[i].title.rendered}</h1>
+                <h2>${results[i].title.rendered}</h2>
             </div>
         </a>`;
         }
