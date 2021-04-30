@@ -42,46 +42,50 @@ form.addEventListener("submit", e => {
 	controlInputs();
 });
 
-function controlInputs() {
-	const nameValue = userName.value.trim();
-    const emailValue = email.value.trim();
-    const subjectValue = subject.value.trim();
-	const messageValue = message.value.trim();
-    	
-	if(nameValue === "") {
+function controlInputs() {    	
+    if(!validateLen(userName.value, 4)){
 		setErrorFor(userName, "Must be more than 5 characters long");
 	} else {
-		setSuccessFor(userName);
-	}
+	    setSuccessFor(userName);}
 	
-	if(subjectValue === "") {
+    if(!validateLen(subject.value, 14)){
 		setErrorFor(subject, "Must be more than 15 characters long");
 	} else {
 		setSuccessFor(subject);
 	}
 
-    if(messageValue === "") {
+    if(!validateLen(message.value, 24)){
 		setErrorFor(message, "Must be more than 25 characters long");
 	} else {
 		setSuccessFor(message);
 	}
 	
-	if(emailValue === "") {
+	if(!validateEmail(email.value, 0)){
 		setErrorFor(email, "Must be a valid email");
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, "Not a valid email");
 	} else {
 		setSuccessFor(email);
 	}
 
     button.onclick = function(){
-        if((nameValue) && (subjectValue) && (messageValue) && (emailValue)) {
-            //location.href = "https://rainydays-kirikvi.netlify.app/order_confirmation.html";
-            alert("Message was sent! I will answer you when I have access to internet. Thank you!")
+        if(validateLen(userName.value, 4) && validateLen(subject.value, 14) && validateLen(message.value, 24) && validateEmail(email.value, 0)) {
+            alert("Your message was sent! I will answer you when I have access to internet. Thank you!");
+            location.href = "https://kingdomofnorway.netlify.app/contact.html";
         } else {
             console.log("Not Yet");
         }
     }
+}
+
+function validateLen(value, len){
+    if(value.trim().length > len){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validateEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 function setErrorFor(input, text) {
@@ -96,7 +100,4 @@ function setSuccessFor(input) {
 	formItem.className = "form-item success";
 }
 	
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
 
