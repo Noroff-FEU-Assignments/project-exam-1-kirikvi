@@ -515,4 +515,11 @@ i {
         padding: 20px;
     }    
 
+    
+    .prev-next button {
+        margin: 0 10px;
+        width: 115px;
+        font-size: .53rem;
+    }
+
 }
