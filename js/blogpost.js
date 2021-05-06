@@ -16,10 +16,13 @@ async function createPost(){
 
         title.innerHTML = "KoN | " + postResult.title.rendered;
 
+        const dateTime = postResult.date;
+        const date = dateTime.substring(0,10);
+
         postContainer.innerHTML = `
             <div>
                 <h1>${postResult.title.rendered}</h1>
-                <p>${postResult.date}</p>
+                <p>${date}</p>
                 <p>${postResult.content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;

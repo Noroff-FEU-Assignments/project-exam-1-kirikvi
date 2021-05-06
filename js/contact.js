@@ -1,6 +1,7 @@
 const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/pages/123";
 const contact = document.querySelector(".contact-content");
 
+// API CALL
 async function fetchContact(){
     try {
         const search = await fetch(url);
@@ -28,7 +29,7 @@ async function fetchContact(){
 }
 fetchContact()
 
-/**Contact form validation */
+// Contact form validation 
 const form = document.querySelector(".contact-form");
 const userName = document.querySelector("#name");
 const email = document.querySelector("#e-mail");
@@ -42,6 +43,7 @@ form.addEventListener("submit", e => {
 	controlInputs();
 });
 
+// Form input validations
 function controlInputs() {    	
     if(!validateLen(userName.value, 4)){
 		setErrorFor(userName, "Must be more than 5 characters long");
@@ -66,6 +68,7 @@ function controlInputs() {
 		setSuccessFor(email);
 	}
 
+    // A message is alerted to the user, indicating that their message was sent
     button.onclick = function(){
         if(validateLen(userName.value, 4) && validateLen(subject.value, 14) && validateLen(message.value, 24) && validateEmail(email.value, 0)) {
             alert("Your message was sent! I will answer you when I have access to internet. Thank you!");

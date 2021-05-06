@@ -13,11 +13,15 @@ async function fetchPosts(){
             if(i === 1){
                 break;
             }
-       
+            
+            // Showing only date, not time
+            const dateTime = results[i].date;
+            const date = dateTime.substring(0,10);
+
             indexContent.innerHTML += `
             <div class="index-item">
                 <h1>${results[i].title.rendered}</h1>
-                <p>${results[i].date}</p>
+                <p>${date}</p>
                 <p>${results[i].content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;

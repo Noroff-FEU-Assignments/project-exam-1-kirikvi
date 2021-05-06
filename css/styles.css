@@ -58,6 +58,7 @@ footer{
     background-color: #3A403B;
 }
 
+.viewmore,
 button {
     background-color: #3A403B;
     color:#EFEFEF;
@@ -66,6 +67,7 @@ button {
     text-transform: uppercase;
 }
 
+.viewmore:hover,
 button:hover {
     background-color:#c8c7c2;
     color: #f7f7f7;
@@ -95,7 +97,8 @@ h5,
 h6,
 input,
 textarea,
-button {
+button,
+.viewmore {
     font-family: "noto-sans-cjk-kr", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -312,6 +315,12 @@ i {
     object-fit: cover;
 }
 
+.finish {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
 .button-container {
     padding: 20px;
     text-align: center;
@@ -443,7 +452,8 @@ i {
     h6,
     input,
     textarea,
-    button {
+    button,
+    .viewmore {
         font-size: .8rem; 
     }
 

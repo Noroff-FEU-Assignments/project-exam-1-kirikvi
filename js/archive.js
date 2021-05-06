@@ -1,4 +1,4 @@
-const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts";
+const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts?per_page=15";
 const archive = document.querySelector(".archive");
 
 async function fetchPosts(){
@@ -8,7 +8,7 @@ async function fetchPosts(){
         console.log(results);    
 
         for(let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+            console.log(results.length);
        
         archive.innerHTML += `
         <a href="post.html?id=${results[i].id}">
@@ -32,3 +32,21 @@ async function fetchPosts(){
     }
 }
 fetchPosts()
+
+// VIEW MORE ----------------------------------
+
+const archiveItem = document.querySelector(".archive-item");
+const viewMoreButton = document.querySelector(".viewmore");
+const viewMore = document.querySelector(".archive-item:hidden");
+
+archive.ready(function(){
+    archiveItem.slice(0, 4).show();
+    viewMoreButton.onclick = function(e){
+        e.preventDefault();
+        viewMore.slice(0,4).slideDown();
+        
+        if(viewMore.length === 0){
+           (viewMoreButton).text("You have reached the first post").addClass("finish");   
+        }
+    }
+})
