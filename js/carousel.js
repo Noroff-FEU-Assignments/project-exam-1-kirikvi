@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".latest-item");
+const carousel = document.querySelector(".carousel");
 
 async function getPosts(){
     try {
@@ -10,9 +10,9 @@ async function getPosts(){
             console.log(posts[i]);
 
             if(i === 0){
-                continue;
-            } if (i === 5) {
-                break;
+                continue; // Skip the latest post, because it already is on the home page.
+            } if (i === 7) { 
+                break; // Get the last 6 posts
             }
        
             carousel.innerHTML += `
@@ -21,6 +21,11 @@ async function getPosts(){
                     <h3>${posts[i].title.rendered}</h3>
                 </div>
             </a>`;
+
+            // Adding a class of "initial" to the first post
+            const carouselItem = document.querySelector(".carousel-item");
+            if(i === 1)
+                carouselItem.classList.add("initial");
         }
     }
 

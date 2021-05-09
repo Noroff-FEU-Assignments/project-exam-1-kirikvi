@@ -195,14 +195,14 @@ footer p {
     grid-area: journey;
 }
 .index-latest{
-    grid-area: latest;
+    grid-area: carousel;
 }
 
 .index-content {
     display: grid;
     grid-template-areas: 
     "post journey"
-    "post latest";
+    "post carousel";
 }
 
 .contact-background,
@@ -234,7 +234,8 @@ footer p {
 }
 
 /* CAROUSEL */
-.latest-item {
+
+.carousel {
     display: flex;
     flex-direction: column;
 }
@@ -243,7 +244,7 @@ footer p {
     border: 2px solid #efefef;
     border-radius: 3px;
     max-width: 200px;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .carousel-item h3,
@@ -472,7 +473,7 @@ i {
         grid-template-areas: 
         "journey"
         "post"
-        "latest";
+        "carousel";
     }
 
     .index-journey {
@@ -481,7 +482,8 @@ i {
 
     /* CAROUSEL */
 
-    .latest-item {
+
+    .carousel{
         flex-direction: row;
         overflow: hidden;
     }
@@ -516,7 +518,7 @@ i {
         margin: auto;
     }
 
-    .latest-item h3 {
+    .carousel h3 {
         font-size: 0.8rem;
     }
 
