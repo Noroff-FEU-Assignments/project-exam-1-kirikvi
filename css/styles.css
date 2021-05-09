@@ -150,6 +150,12 @@ header li {
     padding: 25px 40px;
 }
 
+.date {
+    display: inline-block;
+    color:#9fbfaf;
+    font-weight: 700;
+}
+
 /*HEADER--------------------------*/
 header li a{
     text-decoration: none;
@@ -265,7 +271,6 @@ i {
 .index-latest{
     text-align: center;
 }
-
 
 .index-latest h2{
     text-align:left;

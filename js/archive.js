@@ -33,7 +33,7 @@ async function fetchPosts(){
 }
 fetchPosts()
 
-// VIEW MORE ----------------------------------
+/* VIEW MORE ----------------------------------
 
 const archiveItem = document.querySelector(".archive-item");
 const viewMoreButton = document.querySelector(".viewmore");
@@ -49,4 +49,4 @@ archive.ready(function(){
            (viewMoreButton).text("You have reached the first post").addClass("finish");   
         }
     }
-})
+})*/

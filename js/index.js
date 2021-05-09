@@ -21,7 +21,7 @@ async function fetchPosts(){
             indexContent.innerHTML += `
             <div class="index-item">
                 <h1>${results[i].title.rendered}</h1>
-                <p>${date}</p>
+                <p class="date">${date}</p>
                 <p>${results[i].content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;

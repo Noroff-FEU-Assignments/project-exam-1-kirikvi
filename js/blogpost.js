@@ -22,7 +22,7 @@ async function createPost(){
         postContainer.innerHTML = `
             <div>
                 <h1>${postResult.title.rendered}</h1>
-                <p>${date}</p>
+                <p class="date">${date}</p>
                 <p>${postResult.content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;
