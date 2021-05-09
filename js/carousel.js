@@ -17,8 +17,7 @@ async function getPosts(){
        
             carousel.innerHTML += `
             <a href="post.html?id=${posts[i].id}">
-                <div class="carousel-item">
-                    <p>${posts[i].content.rendered}</p>
+                <div class="carousel-item" style=background-image: ${posts[i].content.rendered}
                     <h3>${posts[i].title.rendered}</h3>
                 </div>
             </a>`;
