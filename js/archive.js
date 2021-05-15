@@ -10,6 +10,7 @@ async function fetchPosts(){
         const results = await search.json();
         console.log(results);    
 
+      // view 10 blog posts  
         for(let i = 0; i < 10; i++) {
             const postList = results[i];
             console.log(postList);

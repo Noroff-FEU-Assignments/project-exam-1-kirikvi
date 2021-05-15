@@ -29,9 +29,8 @@ async function createPost(){
             </div>`;
 
         breadcrumbs.innerHTML = `
-        <a href="index.html">home /</a> 
-        <a href="archive.html">archive /</a>
-        <a href="#">${postResult.title.rendered}</a>`;    
+        <a href="index.html">Home /</a> 
+        <a href="archive.html">Archive</a>`;    
     }
     catch(error) {
         console.log(error);
