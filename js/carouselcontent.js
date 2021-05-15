@@ -9,9 +9,7 @@ async function getPosts(){
         for(let i = 0; i < posts.length; i++) {
             console.log(posts[i]);
 
-            if(i === 0){
-                continue; // Skip the latest post, because it already is on the home page.
-            } if (i === 7) { 
+            if (i === 7) { 
                 break; // Get the last 6 posts
             }
        

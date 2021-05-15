@@ -144,7 +144,7 @@ header li {
     font-style: normal;
     text-transform: uppercase;
     display: inline;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     padding: 25px 40px;
 }
 
@@ -190,18 +190,20 @@ footer p {
     grid-area: post;
 }
 .index-journey{
-    grid-area: journey;
+    grid-area: welcome;
 }
 .index-latest{
     grid-area: carousel;
 }
 
-.index-content {
+.index-content { 
     display: grid;
     grid-template-areas: 
-    "post journey"
+    "post welcome"
+    "post carousel"
     "post carousel";
 }
+
 
 .contact-background,
 .about-content,
@@ -233,7 +235,7 @@ footer p {
 
 /* WELCOME*/
 .index-journey {
-    max-width: 320px;
+    max-width: 300px;
 }
 
 /* CAROUSEL */
@@ -322,7 +324,6 @@ i {
 .carousel-item p {
     display: none;
 }
-
 
 .index-latest{
     text-align: center;
@@ -471,6 +472,12 @@ i {
 	visibility: visible;
 }
 
+@media screen and (max-width: 1105px) {
+    header li {
+        font-size: 2rem;
+        padding: 20px;
+    }
+}
 
 @media screen and (max-width: 885px) {
 /*GENERAL STYLES-----------------------------------------------*/
@@ -512,12 +519,16 @@ i {
         font-size: .8rem; 
     }
 
+    .nav-bar {
+        margin-bottom: 10px;
+    }
+
 /*INDEX -------------------------------------*/
     .index-content {
         grid-template-areas: 
-        "journey"
-        "post"
-        "carousel";
+        "welcome welcome"
+        "post post"
+        "carousel carousel";
     }
 
     .index-journey {

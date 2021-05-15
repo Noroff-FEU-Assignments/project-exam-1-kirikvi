@@ -1,4 +1,5 @@
 const postContainer = document.querySelector(".post-content");
+const breadcrumbs = document.querySelector(".breadcrumbs");
 const title = document.querySelector("title");
 const queryString = document.location.search;
 const parameters = new URLSearchParams(queryString);
@@ -26,6 +27,11 @@ async function createPost(){
                 <p>${postResult.content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;
+
+        breadcrumbs.innerHTML = `
+        <a href="index.html">home /</a> 
+        <a href="archive.html">archive /</a>
+        <a href="#">${postResult.title.rendered}</a>`;    
     }
     catch(error) {
         console.log(error);
