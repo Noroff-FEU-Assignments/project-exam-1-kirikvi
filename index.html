@@ -56,30 +56,33 @@
 
    <main>
         <div class="index-content">
+            <!--WELCOME-->
+            <div class="index-welcome">
+                <h2>Welcome to my blog!</h2>
+            </div>  
+            
+            <!--THE NEWEST POST-->
             <div class="index-post">
             </div>
 
-            <div class="index-journey">
-                <h2>Welcome to my blog!</h2>
-            </div>
-                
+            <!--CAROUSEL-->
             <div class="index-latest">
-                <h2>Latest posts</h2>
-                <div class="carousel-wrapper" id="carousel-flex">
-                    <i class="fas fa-chevron-up"></i>
-                    <i class="fas fa-chevron-left"></i>
-
-                    <div class="carousel"></div>
-
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-chevron-right"></i>    
+                <h2>Latest posts -</h2> 
+                <div class="carousel-wrapper"> 
                     
+                    <!--content from js--> 
+                    <div class="carousel-container"></div> 
                     
+                    <!--next and previus buttons-->
+                    <div class="controls">
+                        <button class="arrow prev">&#10094;</button> 
+                        <button class="arrow next">&#10095;</button> 
+                    </div>   
                 </div>
-            </div>
-             
-            <div class="index-button">
-                <a href="archive.html"><button>Archive</button></a>
+            </div> 
+
+            <div class="button-container">
+                <a class="button" href="archive.html">View all posts</a>
             </div>
         </div>      
    </main>

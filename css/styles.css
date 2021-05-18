@@ -58,7 +58,8 @@ footer{
     background-color: #3A403B;
 }
 
-button {
+button,
+.button {
     background-color: #3A403B;
     color:#EFEFEF;
     border: none;
@@ -66,7 +67,8 @@ button {
     text-transform: uppercase;
 }
 
-button:hover {
+button:hover,
+.button:hover {
     background-color:#c8c7c2;
     color: #f7f7f7;
     cursor: pointer;
@@ -184,35 +186,14 @@ footer p {
 
 
 /*INDEX PAGE ------------------------------------------------------*/
-/*GRID*/
-
-.index-post{
-    grid-area: post;
-}
-.index-journey{
-    grid-area: welcome;
-}
-.index-latest{
-    grid-area: carousel;
-}
-
-.index-content { 
-    display: grid;
-    grid-template-areas: 
-    "post welcome"
-    "post carousel"
-    "post carousel";
-}
-
 
 .contact-background,
 .about-content,
 .post-content,
 .archive-item,
-.index-post,
-.index-journey,
-.index-latest,
-.index-carousel{
+.archive-content,
+.index-content,
+.breadcrumbs {
  background-color: #f7f7f7;
  padding: 30px;
  margin: 10px;   
@@ -225,7 +206,18 @@ footer p {
 .post-content img,
 .index-post img{
     max-height: 300px;
+    width: 60%;
+    margin: auto;
     object-fit: cover;
+}
+
+.button-container {
+    text-align: center;
+    margin: auto;
+}
+
+.button {
+    text-decoration: none;
 }
 
 /*INDEX BLOGPOST*/
@@ -234,116 +226,88 @@ footer p {
 }
 
 /* WELCOME*/
-.index-journey {
-    max-width: 300px;
+.index-welcome {
+    max-width: 280px;
+    background-color: #EFEFEF;
+    float: right;
+    border: 2px solid #c8c7c2;
+    padding: 20px;
+    margin: 20px;
 }
 
 /* CAROUSEL */
+.index-latest {
+    width: 100%;
+    margin: 10px auto;
+}
 
 .carousel-wrapper {
+    border: 2px solid #3A403B;
+    height: 400px; 
+    overflow:hidden;
     position: relative;
-    margin: 0 auto;
 }
 
 .carousel-container {
     height: 100%;
-    position: relative;
-}
-
-.carousel {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    width: 500%;
+    transition: all 0.3s;
 }
 
-.carousel-item {
-    border: 2px solid #efefef;
-    border-radius: 3px;
-    position: absolute;
-    background-color: #EFEFEF;
-    top: 0;
-    margin: 5px auto;
-}
-
-.carousel-item img {
+.carousel-container .carousel {
+    width: 100%;
     height: 100%;
-    max-height: 150px;
-    object-fit: cover;   
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-.carousel-button {
+.carousel img {
+    width: 100%;
+    height: 100%;
+}
+
+.controls .arrow {
+    font-size: 2rem;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: transparent;
-    border: 0;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
+    color: #9fbfaf;
+    transition: 0.6s ease;
+    border-radius: 50px;
 }
 
-.carousel-button:hover {
-    background: transparent;
-}
-
-.carousel-button.up{
-    top: -70px;
-}
-
-.carousel-button.down{
-    bottom: -350px;
-}
-
-.carousel-button.right{
-    right: -40px;
-}
-
-.carousel-button.left{
-    left: -40px;
-}
-
-.carousel-item h3,
-.carousel-item a,
-i {
-    text-align: center;
-}
-
-i {
-    margin: auto;
-    font-size: 3rem;
+.arrow:hover {
     color: #3A403B;
-    padding: 20px;
 }
 
-.fa-chevron-left,
-.fa-chevron-right {
-    display: none;
+.arrow.prev{
+    left: 10px;
 }
 
-.carousel-item p {
-    display: none;
+.arrow.next {
+    right: 10px;
 }
 
-.index-latest{
+.carousel-title {
+    font-size: 5rem;
+    color:#f7f7f7;
+    position: absolute;
+    bottom: 8px;
     text-align: center;
 }
 
-.index-latest h2{
-    text-align:left;
-}
-
-.index-button {
-    margin: auto;
-}
 /*ARCHIVE---------------------------------------------------------------*/
-
 .loading {
     text-align: center;
 }
 
 .heading {
     margin: 0 auto 20px 20px;
+    background-color: #f7f7f7;
 }
 
 .heading h1,
@@ -363,6 +327,11 @@ i {
     overflow: hidden;
     display: flex;
     padding: 10px;
+
+}
+
+.archive-item:hover {
+    background-color: #EFEFEF;
 }
 
 .archive-item:hover,
@@ -372,7 +341,7 @@ i {
 }
 
 .archive-item img {
-    max-height: 190px;
+    max-height: 100%;
     max-width: 450px;
     object-fit: cover;
 }
@@ -383,7 +352,12 @@ i {
 }
 
 /*BLOG POST-------------------------*/
+.breadcrumbs {
+    margin-bottom: 0;
+}
+
 .post-content {
+    margin-top: 0;
     padding: 20px 80px;
 }
 
@@ -524,69 +498,8 @@ i {
     }
 
 /*INDEX -------------------------------------*/
-    .index-content {
-        grid-template-areas: 
-        "welcome welcome"
-        "post post"
-        "carousel carousel";
-    }
-
-    .index-journey {
-        max-width: 100%;
-    }
-
-    /* CAROUSEL */
-
-
-    .carousel{
-        flex-direction: row;
-        overflow: hidden;
-    }
-
-    .carousel-item {
-        height: 170px;
-    }
-
-    i {
-        font-size: 2rem;
-        padding: 10px;
-    }
-
-    .fa-chevron-down,
-    .fa-chevron-up {
-        display: none;
-    }
-
-    .fa-chevron-left,
-    .fa-chevron-right {
-        display: block;
-    }
-
-    #carousel-flex {
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-
-    .carousel-item img {
-        max-height: 90px;
-        margin: auto;
-    }
-
-    .carousel h3 {
-        font-size: 0.8rem;
-    }
-
     .index-post {
         padding: 20px;
-    }
-
-    .index-latest {
-        padding: 5px;
-    }
-
-    .index-latest h2 {
-        padding: 30px 30px 5px;
     }
 
     .post-content img,
@@ -618,10 +531,9 @@ i {
 
 /*BLOG POST ------------------------------------*/
     .post-content {
-        padding: 20px;
+        padding: 0 20px 20px 20px;
     }    
-
-    
+  
     .prev-next button {
         margin: 0 10px;
         width: 115px;

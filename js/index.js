@@ -44,7 +44,7 @@ fetchPosts()
 // Welcome to my blog
 
 const welcomeUrl = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/pages/278";
-const welcome = document.querySelector(".index-journey");
+const welcome = document.querySelector(".index-welcome");
 
 async function fetchWelcome(){
     try {
@@ -62,7 +62,7 @@ async function fetchWelcome(){
     catch(error){
         console.log(error);
         aboutContent.innerHTML = `
-        <h1>Something went wrong. Please try again later</h1>
+        <p>Something went wrong. Please try again later</hp>
         <p class="signature">John Doe</p>`;
     }
 
