@@ -255,6 +255,7 @@ footer p {
     height: 400px; 
     overflow:hidden;
     position: relative;
+    margin: 10px;
 }
 
 .carousel-container {
@@ -350,6 +351,9 @@ footer p {
 .archive-text p {
     display: block;
     font-size: 0.7rem;
+}
+
+.archive-text a {
     text-decoration: none;
 }
 
