@@ -333,9 +333,24 @@ footer p {
     text-align: center;
 }
 
+.archive a {
+    overflow: hidden;
+    margin: auto;
+}
+
 .archive-item p {
     padding: 0;
     display: none;
+}
+
+.archive-text {
+    margin: 10px;
+}
+
+.archive-text p {
+    display: block;
+    font-size: 0.7rem;
+    text-decoration: none;
 }
 
 .archive-item {
@@ -343,17 +358,16 @@ footer p {
     overflow: hidden;
     display: flex;
     padding: 10px;
-
+    margin: 10px;
+    border-top: 1px solid #3A403B;
 }
 
-.archive-item:hover,
-.archive-item:active {
-    border: 5px solid #c8c7c2;
-    background-color: #EFEFEF;
+.archive-item small,
+.archive-item h2 {
+    display: block;
 }
 
-.archive-item:hover,
-.carousel-item:hover {
+.archive-item:hover {
     transform: scale(1.05);
     transition: 0.5s ease-in-out;  
 }
@@ -377,6 +391,10 @@ footer p {
 .post-content {
     margin-top: 0;
     padding: 20px 80px;
+}
+
+.post-content img {
+    width: 100%;
 }
 
 .prev-next {
@@ -493,16 +511,16 @@ footer p {
     font-family: "viktor-script", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     text-transform: none;
     }
     
     .signature {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     h1 {
-        font-size: 1.5rem;  
+        font-size: 1.4rem;  
     }
 
     h2 {
@@ -547,6 +565,11 @@ footer p {
         margin: auto;
     }
 
+    .index-item img {
+        width: 100%;
+        padding-top: 5px;
+    }
+
     /* CAROUSEL */
     .carousel-wrapper {
         border: 2px solid #3A403B;
@@ -556,27 +579,49 @@ footer p {
     }
 
     .carousel-title {
-        font-size: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .carousel-title img {
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .controls .arrow {
+        font-size: .8rem;
+        padding: 10px;
+    }
+    
+    .arrow:hover {
+        background-color: #3A403B;
+        color: #c8c7c2;
     }
 
 /*ARCHIVE------------------------------*/
-    .archive-item {
-        max-height: 400px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
+    .heading p {
+        display: none;
     }
 
-    .archive-item:hover,
-    .carousel-item:hover {
-        transform: scale(1.05);
-        transition: 0.5s ease-in-out;  
+    .archive-item {
+        max-height: 300px;
+        flex-direction: column;
+        padding: 15px 5px;
     }
 
     .archive-item img {
-        max-width: 100%;
+       
+        max-height:100px;
     }
+
+    .archive-item figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    .archive-item h2 {
+        margin-top: 5px;
+    }
+
 
 /*BLOG POST ------------------------------------*/
     .post-content {
