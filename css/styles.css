@@ -547,6 +547,18 @@ footer p {
         margin: auto;
     }
 
+    /* CAROUSEL */
+    .carousel-wrapper {
+        border: 2px solid #3A403B;
+        height: 230px; 
+        overflow:hidden;
+        position: relative;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+    }
+
 /*ARCHIVE------------------------------*/
     .archive-item {
         max-height: 400px;
