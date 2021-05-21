@@ -5,8 +5,6 @@ const queryString = document.location.search;
 const parameters = new URLSearchParams(queryString);
 const id = parameters.get("id");
 
-console.log(id);
-
 const postUrl = `https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts/${id}`;
 
 async function createPost(){
@@ -30,7 +28,8 @@ async function createPost(){
 
         breadcrumbs.innerHTML = `
         <a href="index.html">Home /</a> 
-        <a href="archive.html">Archive</a>`;    
+        <a href="archive.html">Archive /</a>
+        <a href="">${postResult.title.rendered}</a>`;    
     }
     catch(error) {
         console.log(error);

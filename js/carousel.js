@@ -1,10 +1,11 @@
+const carouselUrl = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts?_embed";
 const carousel = document.querySelector(".carousel-container");
 const prevArrow = document.querySelector(".prev");
 const nextArrow = document.querySelector(".next");
 
 async function getPosts(){
     try {
-        const getPost = await fetch(url);
+        const getPost = await fetch(carouselUrl);
         const posts = await getPost.json();
         console.log(posts);    
 
@@ -16,12 +17,16 @@ async function getPosts(){
             if (i === 5) { 
                 break; 
             }
-       
+
+            media = posts[i]._embedded['wp:featuredmedia']['0'];
+            console.log(media);
+
             carousel.innerHTML += `
             <div class="carousel">
-                <li class="carousel-slide" style=background-image: "${posts[i].content.rendered}">
-                    <a href="post.html?id=${posts[i].id}" class="carousel-title">${posts[i].title.rendered}</a>
-                </li>
+                <a href="post.html?id=${posts[i].id}" class="carousel-title">
+                <img src="${media.source_url}" alt="${media.alt_text}"/></a>
+                <a href="post.html?id=${posts[i].id}" class="carousel-title title">${posts[i].title.rendered}</a>
+                
             </div>`;
         }
     }

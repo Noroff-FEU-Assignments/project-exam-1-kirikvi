@@ -1,4 +1,4 @@
-const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts";
+const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts?_embed";
 const indexContent = document.querySelector(".index-post");
 
 async function fetchPosts(){
@@ -9,6 +9,10 @@ async function fetchPosts(){
 
         for(let i = 0; i < results.length; i++) {
             console.log(results[i]);
+
+            const image = results[i]._embedded['wp:featuredmedia']['0'];
+            console.log(image);
+        
 
             if(i === 1){
                 break;
@@ -22,6 +26,7 @@ async function fetchPosts(){
             <div class="index-item">
                 <h1>${results[i].title.rendered}</h1>
                 <p class="date">${date}</p>
+                <img src="${image.source_url}" alt="${image.alt_text}"/>
                 <p>${results[i].content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;
@@ -61,7 +66,7 @@ async function fetchWelcome(){
 
     catch(error){
         console.log(error);
-        aboutContent.innerHTML = `
+        welcome.innerHTML = `
         <p>Something went wrong. Please try again later</hp>
         <p class="signature">John Doe</p>`;
     }

@@ -55,6 +55,21 @@
    </header>
 
    <main>
+        <div class="index-latest">
+            <!--CAROUSEL<h2>Latest posts</h2> -->
+            
+            <div class="carousel-wrapper"> 
+                
+                <!--content from js--> 
+                <div class="carousel-container"></div> 
+                
+                <!--next and previus buttons-->
+                <div class="controls">
+                    <button class="arrow prev">&#10094;</button> 
+                    <button class="arrow next">&#10095;</button> 
+                </div>   
+            </div>
+        </div> 
         <div class="index-content">
             <!--WELCOME-->
             <div class="index-welcome">
@@ -64,26 +79,22 @@
             <!--THE NEWEST POST-->
             <div class="index-post">
             </div>
-
-            <!--CAROUSEL-->
-            <div class="index-latest">
-                <h2>Latest posts -</h2> 
-                <div class="carousel-wrapper"> 
-                    
-                    <!--content from js--> 
-                    <div class="carousel-container"></div> 
-                    
-                    <!--next and previus buttons-->
-                    <div class="controls">
-                        <button class="arrow prev">&#10094;</button> 
-                        <button class="arrow next">&#10095;</button> 
-                    </div>   
-                </div>
-            </div> 
-
+            
             <div class="button-container">
-                <a class="button" href="archive.html">View all posts</a>
+                <a href="archive.html">Go to the archive >></a>
             </div>
+
+            <div class="comment-container">
+                <h2>Comments</h2>
+                <div class="comments"></div>
+                <form class="message-form">
+                    <input type="text" name="name" id="name" placeholder="Name or nickname">
+                    <textarea name="comment" type="text" id="comment" placeholder="Write your comment here"></textarea>
+                    <button class="message-submit">Submit</button>         
+                </form>  
+            </div>
+
+            
         </div>      
    </main>
     
@@ -92,8 +103,6 @@
    </footer>
 
    <script src="js/index.js"></script>
-   <script src="js/scroll.js"></script>
-   <script src="js/carouselcontent.js"></script>
    <script src="js/carousel.js"></script>
 </body>
 </html>
