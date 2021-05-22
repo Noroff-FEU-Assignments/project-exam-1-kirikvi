@@ -29,7 +29,7 @@ async function createPost(){
         breadcrumbs.innerHTML = `
         <a href="index.html">Home /</a> 
         <a href="archive.html">Archive /</a>
-        <a href="">${postResult.title.rendered}</a>`;    
+        <a href="" class="current-crumb">${postResult.title.rendered}</a>`;    
     }
     catch(error) {
         console.log(error);

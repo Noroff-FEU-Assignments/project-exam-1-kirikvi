@@ -26,7 +26,6 @@ async function getPosts(){
                 <a href="post.html?id=${posts[i].id}" class="carousel-title">
                 <img src="${media.source_url}" alt="${media.alt_text}"/></a>
                 <a href="post.html?id=${posts[i].id}" class="carousel-title title">${posts[i].title.rendered}</a>
-                
             </div>`;
         }
     }
