@@ -230,7 +230,8 @@ footer p {
     margin: 0 auto;
 }
 
-.index-item figure {
+.index-item figure,
+.post-content figure {
     display: none;
 }
 
@@ -440,6 +441,32 @@ footer p {
     color:#c8c7c2;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #c8c7c2;
+    background-color: rgba(207, 204, 196, 0.9);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    transition: 0.3s;
+    font-size: 3rem;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
 /*ABOUT------------------------------------------------------*/
 .about-content img {
     float: right;
@@ -485,6 +512,10 @@ footer p {
 
 .form-item.error small {
 	visibility: visible;
+}
+
+.modal-img {
+    height: 200px;
 }
 
 @media screen and (max-width: 1105px) {
@@ -601,7 +632,6 @@ footer p {
     }
 
     .carousel-title img {
-        height: 240px;
         object-fit: cover;
     }
 
@@ -631,8 +661,7 @@ footer p {
     }
 
     .archive-item img {
-       
-        max-height:100px;
+       height:100px;
     }
 
     .archive-item figure {
@@ -672,6 +701,7 @@ footer p {
     .current-crumb {
         font-weight: bold;
     }
+    
 
     /*ABOUT and CONTACT**/
     .about-content img {
