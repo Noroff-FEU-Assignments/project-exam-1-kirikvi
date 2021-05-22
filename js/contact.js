@@ -1,5 +1,6 @@
 const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/pages/123";
 const contact = document.querySelector(".contact-content");
+const loader = document.querySelector(".loader");
 
 // API CALL
 async function fetchContact(){
@@ -14,6 +15,11 @@ async function fetchContact(){
             <p>${content.content.rendered}</p>
             <p class="signature">John Doe</p>
         </div>`;
+        
+        if(content){
+            loader.style.display = "none";
+        }
+
     }
 
     catch(error){

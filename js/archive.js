@@ -29,8 +29,6 @@ async function fetchPosts(){
                 </div>
             </a>`;
             
-            //const archiveItem = document.querySelector(".archive-item"); 
-
             if(results){
                 loading.style.display = "none";
             }

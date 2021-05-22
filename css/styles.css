@@ -160,6 +160,23 @@ p.date {
     margin: 0;
 }
 
+.loader {
+    border: 6px solid #c8c7c2;
+    border-top: 6px solid #3A403B; 
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+
+  
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
 /*HEADER--------------------------*/
 header li a{
     text-decoration: none;
@@ -392,6 +409,10 @@ footer p {
 /*BLOG POST-------------------------*/
 .breadcrumbs {
     margin-bottom: 0;
+}
+
+.current-crumb {
+    font-weight: bold;
 }
 
 .post-content {
@@ -697,10 +718,6 @@ footer p {
 
     .breadcrumbs {
         font-size: .8rem;
-    }
-
-    .current-crumb {
-        font-weight: bold;
     }
     
 

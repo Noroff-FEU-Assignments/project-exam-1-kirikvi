@@ -1,5 +1,6 @@
 const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/pages/118";
 const aboutContent = document.querySelector(".about-content");
+const loader = document.querySelector(".loader");
 
 async function fetchAbout(){
     try {
@@ -13,6 +14,10 @@ async function fetchAbout(){
             <p>${content.content.rendered}</p>
             <p class="signature">John Doe</p>
         </div>`;
+
+        if(content){
+            loader.style.display = "none";
+        }
     }
 
     catch(error){

@@ -1,5 +1,6 @@
 const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts?_embed";
 const indexContent = document.querySelector(".index-post");
+const loader = document.querySelector(".loader");
 
 async function fetchPosts(){
     try {
@@ -13,7 +14,6 @@ async function fetchPosts(){
             const image = results[i]._embedded['wp:featuredmedia']['0'];
             console.log(image);
         
-
             if(i === 1){
                 break;
             }
@@ -30,6 +30,10 @@ async function fetchPosts(){
                 <p>${results[i].content.rendered}</p>
                 <p class="signature">John Doe</p>
             </div>`;
+
+            if(results){
+                loader.style.display = "none";
+            }
         }
     }
 
