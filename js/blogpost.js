@@ -22,7 +22,7 @@ async function createPost(){
         const date = dateTime.substring(0,10);
 
         postContainer.innerHTML = `
-            <div class="post-content">
+            <div>
                 <h1>${postResult.title.rendered}</h1>
                 <p class="date">${date}</p>
                 <img class="post-img" id="post-img" src="${image.source_url}" alt="${image.alt_text}">
