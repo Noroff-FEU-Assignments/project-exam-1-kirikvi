@@ -730,6 +730,7 @@ footer p {
 
     .archive-item h2 {
         margin-top: 5px;
+        font-size: 1rem;
     }
 
 
@@ -776,5 +777,11 @@ footer p {
 
     .wp-image-367 {
         width: 150px;
+    }
+
+    .about-content img { 
+        float: none;
+        margin: 10px auto;
+        width: 100%
     }
 }
