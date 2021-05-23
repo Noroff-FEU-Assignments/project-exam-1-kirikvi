@@ -230,7 +230,8 @@ footer p {
     margin: 0 10px 10px;
 }
 
-.index-post{
+.index-post,
+.comment-container{
     padding: 50px 50px 0 50px;
 }
 
@@ -496,7 +497,6 @@ footer p {
 .comment-container,
 .contact-form-container {
     border-top: 1px solid #c8c7c2;
-    padding: 20px;
     margin: auto;
 }
 
@@ -506,8 +506,7 @@ footer p {
 .contact-form h2,
 .message-form input,
 .message-form textarea,
-.message-form button,
-.comment-container h2{
+.message-form button {
     margin: 10px auto;
     display: block;
     padding: 10px;
