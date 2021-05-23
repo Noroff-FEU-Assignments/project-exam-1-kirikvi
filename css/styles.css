@@ -230,8 +230,7 @@ footer p {
     margin: 0 10px 10px;
 }
 
-.index-post,
-.comment-container{
+.index-post{
     padding: 50px 50px 0 50px;
 }
 
@@ -389,6 +388,17 @@ footer p {
     margin: 20px 0;
 }
 
+
+.comment-container,
+.contact-form-container {
+    border-top: 1px solid #c8c7c2;
+    margin: auto;
+}
+.comment-container{
+    padding: 50px 50px;
+    margin: 40px;
+}
+
 /*ARCHIVE---------------------------------------------------------------*/
 .loading {
     text-align: center;
@@ -422,7 +432,7 @@ footer p {
 }
 
 .archive-text {
-    margin: 10px;
+    margin: 15px;
 }
 
 .archive-text p {
@@ -454,8 +464,8 @@ footer p {
 }
 
 .archive-item img {
-    max-height: 220px;
-    max-width: 430px;
+    height: 220px;
+    width: 430px;
     object-fit: cover;
 }
 
@@ -465,6 +475,10 @@ footer p {
 }
 
 /*BLOG POST-------------------------*/
+.post-background {
+    background-color: #f7f7f7;
+}
+
 .breadcrumbs {
     margin-bottom: 0;
 }
@@ -492,12 +506,6 @@ footer p {
 .prev-next button {
     margin: 0 20px;
     width: 200px;
-}
-
-.comment-container,
-.contact-form-container {
-    border-top: 1px solid #c8c7c2;
-    margin: auto;
 }
 
 .contact-form input,

@@ -49,19 +49,29 @@
         </nav>  
    </header>
 
-   <main>
-       
+   <main class="post-background">
         <div class="breadcrumbs">
         </div>
-
-        
-        
 
         <div class="post-content">       
         <!--Loader-->
         <h2 class="loading">Loading blog...</h2>
         </div> 
-        
+
+        <div class="comment-container">
+            <h2>Comments</h2>
+
+            <div class="comments"><!--BUILT WITH JS--></div>
+            
+            <h2>Leave a comment</h3>
+            <form class="message-form">
+                <small></small>
+                <input class="comment-form-input" type="text" name="name" id="name" placeholder="Name or nickname">
+                <small></small>
+                <textarea class="comment-form-input" name="comment" type="text" id="comment" placeholder="Write your comment here"></textarea>
+                <button class="message-submit">Submit</button>         
+            </form>  
+        </div>
    </main>
     
    <footer>
@@ -69,5 +79,6 @@
    </footer>
 
    <script src="js/blogpost.js"></script>
+   <script src="js/comments.js"></script>
 </body>
 </html>

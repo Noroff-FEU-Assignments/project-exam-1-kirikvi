@@ -33,17 +33,8 @@ async function createPost(){
                 </div>
                 <p>${postResult.content.rendered}</p>
                 <p class="signature">John Doe</p>
-
-                <div class="comment-container">
-                    <h2>Comments</h2>
-                    <div class="comments"></div>
-                    <form class="message-form">
-                        <input type="text" name="name" id="name" placeholder="Name or nickname">
-                        <textarea name="comment" type="text" id="comment" placeholder="Write your comment here"></textarea>
-                        <button class="message-submit">Submit</button>         
-                    </form>  
-                </div>
             </div>`;
+
 
         // IMAGE MODAL  
         const modal = document.querySelector("#modal");
