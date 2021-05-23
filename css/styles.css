@@ -236,6 +236,10 @@ footer p {
     object-fit: cover;
 }
 
+.index-post img {
+    width: 100%;
+}
+
 .button-container {
     text-align: center;
     margin: 30px auto 0px;
@@ -310,10 +314,6 @@ footer p {
     flex-basis: 100%;
 }
 
-.carousel-slide p {
-    display: none;
-}
-
 .controls .arrow {
     font-size: 2rem;
     position: absolute;
@@ -328,12 +328,6 @@ footer p {
     color: #3A403B;
 }
 
-.carousel-image {
-    height: 400px;
-    width: 1500px;
-    object-fit: cover;
-}
-
 .arrow.prev{
     left: 10px;
     border-radius: 0 5px 5px 0;
@@ -346,10 +340,21 @@ footer p {
 
 .carousel-title {
     font-size: 2rem;
-    background: rgba(58, 64, 59, 0.6);
+    background: rgba(58, 64, 59, 0.7);
+    border-radius: 0 20px 0 0;
     color:#f7f7f7;
     position: absolute;
-    text-align: center;
+    width: 100%;
+}
+
+.carousel-title img {
+    width: 25%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-image.initial {
+    width: 100%;
 }
 
 .carousel-title p{
@@ -446,7 +451,9 @@ footer p {
     font-weight: bold;
 }
 
-.post-content {
+.post-content,
+.about-content,
+.contact-background {
     margin-top: 0;
     padding: 20px 80px;
 }
@@ -689,7 +696,6 @@ footer p {
 
     .carousel-image {
         height: 400px;
-        width: 350px;
         object-fit: cover;
     }
 
