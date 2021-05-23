@@ -18,14 +18,18 @@ async function getPosts(){
                 break; 
             }
 
-            media = posts[i]._embedded['wp:featuredmedia']['0'];
+            const media = posts[i]._embedded['wp:featuredmedia']['0'];
             console.log(media);
+
+            const shortText = posts[i].excerpt.rendered.substring(0,200) + "...";
 
             carousel.innerHTML += `
             <div class="carousel">
                 <a href="post.html?id=${posts[i].id}" class="carousel-title">
-                <img src="${media.source_url}" alt="${media.alt_text}"/></a>
-                <a href="post.html?id=${posts[i].id}" class="carousel-title title">${posts[i].title.rendered}</a>
+                <img class="carousel-image" src="${media.source_url}" alt="${media.alt_text}"/></a>
+                <a href="post.html?id=${posts[i].id}" class="carousel-title title">${posts[i].title.rendered}
+                    <p class="carousel-text">${shortText}</p>
+                </a>
             </div>`;
         }
     }
@@ -42,6 +46,8 @@ async function getPosts(){
     }
 }
 getPosts()
+
+// Slide functions
 
 let slideIndex = 0;
 

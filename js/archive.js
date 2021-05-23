@@ -1,4 +1,4 @@
-const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts?per_page=15";
+const url = "https://kingdomofnorway.kvistnes.one/wp-json/wp/v2/posts?per_page=15&_embed";
 const archive = document.querySelector(".archive");
 const viewMore = document.querySelector("#viewmore");
 const buttonContainer = document.querySelector(".button-container");
@@ -8,7 +8,7 @@ async function fetchPosts(){
     try {
         const search = await fetch(url);
         const results = await search.json();
-          
+        console.log(results);  
         
       // view 10 blog posts  
         for(let i = 0; i < 10; i++) {

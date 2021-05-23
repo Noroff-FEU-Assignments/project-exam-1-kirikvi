@@ -59,13 +59,15 @@ async function fetchWelcome(){
     try {
         const find = await fetch(welcomeUrl);
         const welcomeContent = await find.json();
-        console.log(welcomeContent);    
+        console.log(welcomeContent); 
        
         welcome.innerHTML += `
         <div>
-            <p>${welcomeContent.content.rendered}</p>
+            <h2>Welcome to my blog!</h2>
+            <p class="welcome-text">${welcomeContent.content.rendered}</p>
             <p class="signature">John Doe</p>
-        </div>`;
+        </div>
+        <div class="welcome-image>${welcomeContent.content.rendered}</div>`;
     }
 
     catch(error){

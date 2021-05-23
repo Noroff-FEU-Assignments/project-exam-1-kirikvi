@@ -154,6 +154,10 @@ header li {
     padding: 25px 40px;
 }
 
+ul.nav-bar {
+    margin: 10px auto;
+}
+
 p.date {
     color:#3A403B;
     font-size: .8rem;
@@ -234,7 +238,7 @@ footer p {
 
 .button-container {
     text-align: center;
-    margin: auto;
+    margin: 30px auto 0px;
 }
 
 .button {
@@ -254,12 +258,31 @@ footer p {
 
 /* WELCOME*/
 .index-welcome {
-    max-width: 280px;
-    background-color: #EFEFEF;
-    float: right;
-    border: 2px solid #c8c7c2;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px 10px 40px;
+    border-bottom: 1px solid #3A403B;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.index-welcome div {
+    flex: 1 1 auto;
+}
+
+.index-welcome p,
+.index-welcome h2 {
+    width: 70%;
+    margin: 5px;
+}
+
+.index-welcome figure img,
+.welcome-image p {
+    display: none;   
+}
+
+.wp-image-367 {
+    width: 300px;
+    height: 300px;
 }
 
 /* CAROUSEL */
@@ -269,11 +292,10 @@ footer p {
 }
 
 .carousel-wrapper {
-    border: 2px solid #3A403B;
     height: 400px; 
     overflow:hidden;
     position: relative;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .carousel-container {
@@ -292,12 +314,6 @@ footer p {
     display: none;
 }
 
-.carousel img {
-    width: 100%;
-    height: 100%;
-    object-position: bottom;
-}
-
 .controls .arrow {
     font-size: 2rem;
     position: absolute;
@@ -306,11 +322,16 @@ footer p {
     cursor: pointer;
     color: #9fbfaf;
     transition: 0.6s ease;
-    
 }
 
 .arrow:hover {
     color: #3A403B;
+}
+
+.carousel-image {
+    height: 400px;
+    width: 1500px;
+    object-fit: cover;
 }
 
 .arrow.prev{
@@ -324,16 +345,21 @@ footer p {
 }
 
 .carousel-title {
-    font-size: 2.8rem;
-    background-color:#3A403B;
+    font-size: 2rem;
+    background: rgba(58, 64, 59, 0.6);
     color:#f7f7f7;
     position: absolute;
     text-align: center;
 }
 
+.carousel-title p{
+    color:#f7f7f7;
+    font-size: .9rem;
+}
+
 .carousel-title.title {
     padding: 5px 15px;
-    bottom: 8px;
+    bottom: 0px;
 }
 
 /*ARCHIVE---------------------------------------------------------------*/
@@ -353,9 +379,14 @@ footer p {
     text-align: center;
 }
 
-.archive a {
+.archive a,
+.archive-item a {
     overflow: hidden;
-    margin: auto;
+}
+
+.archive-item figure {
+    padding: 0;
+    margin: 0;
 }
 
 .archive-item p {
@@ -382,7 +413,7 @@ footer p {
     display: flex;
     padding: 10px;
     margin: 10px;
-    border-top: 1px solid #3A403B;
+    border-bottom: 1px solid #3A403B;
 }
 
 .archive-item small,
@@ -396,8 +427,8 @@ footer p {
 }
 
 .archive-item img {
-    max-height: 100%;
-    max-width: 450px;
+    max-height: 220px;
+    max-width: 430px;
     object-fit: cover;
 }
 
@@ -455,6 +486,10 @@ footer p {
     padding: 10px;
     width: 100%;
     border: none;
+}
+
+.contact-form button{
+    margin: 20px auto 10px;
 }
 
 .contact-form button:hover,
@@ -570,11 +605,7 @@ footer p {
 
     .logo,
     .signature {
-    font-family: "viktor-script", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 2.5rem;
-    text-transform: none;
     }
     
     .signature {
@@ -595,14 +626,15 @@ footer p {
     h5,
     h6,
     input,
+    label,
     textarea,
     button,
-    #viewmore {
+    #viewmore,
+    #name,
+    #e-mail,
+    #subject,
+    #message {
         font-size: .8rem; 
-    }
-
-    .nav-bar {
-        margin-bottom: 10px;
     }
 
 /*INDEX -------------------------------------*/
@@ -618,14 +650,6 @@ footer p {
     .index-post h1 {
         margin-top: 20px;
     }
-    
-    .index-welcome {
-        max-width: 100%;
-        padding: 15px;
-        margin: 10px;
-        background-color: #f7f7f7;
-        border: 5px solid #c8c7c2;
-    }
 
     .post-content img,
     .index-post img{
@@ -640,12 +664,14 @@ footer p {
         padding-top: 5px;
     }
 
+    .index-welcome p,
+    .index-welcome h2 {
+        width: 100%;
+    }
+
     /* CAROUSEL */
     .carousel-wrapper {
-        border: 2px solid #3A403B;
-        height: 230px; 
-        overflow:hidden;
-        position: relative;
+        height: 230px;
         margin: 10px 10px 20px 10px;
     }
 
@@ -653,7 +679,17 @@ footer p {
         font-size: 1rem;
     }
 
+    .carousel-title p{
+        font-size: .5rem;
+    }
+
     .carousel-title img {
+        object-fit: cover;
+    }
+
+    .carousel-image {
+        height: 400px;
+        width: 350px;
         object-fit: cover;
     }
 
@@ -684,6 +720,7 @@ footer p {
 
     .archive-item img {
        height:100px;
+       max-width: 100%
     }
 
     .archive-item figure {
@@ -723,13 +760,21 @@ footer p {
 
     /*ABOUT and CONTACT**/
     .about-content img {
-        margin: 0px auto 15px;
+        margin: 0px 20px 15px;
     }
 
     .about-content,
     .contact-background {
         padding: 10px 20px;
     }
-    
+}
 
+@media screen and (max-width: 645px) {
+    .index-welcome {
+        flex-direction: column;
+    }
+
+    .wp-image-367 {
+        width: 150px;
+    }
 }
