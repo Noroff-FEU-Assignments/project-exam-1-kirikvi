@@ -21,7 +21,7 @@ async function getPosts(){
             const media = posts[i]._embedded['wp:featuredmedia']['0'];
             console.log(media);
 
-            const shortText = posts[i].excerpt.rendered.substring(0,50) + "...";
+            const shortText = posts[i].excerpt.rendered.substring(0,120) + "...";
 
             carousel.innerHTML += `
             <div class="carousel">

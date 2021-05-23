@@ -24,7 +24,7 @@ async function fetchPosts(){
 
             indexContent.innerHTML += `
             <div class="index-item">
-                <h1>${results[i].title.rendered}</h1>
+                <h2>${results[i].title.rendered}</h2>
                 <p class="date">${date}</p>
                 <img src="${image.source_url}" alt="${image.alt_text}"/>
                 <p>${results[i].content.rendered}</p>
@@ -63,7 +63,7 @@ async function fetchWelcome(){
        
         welcome.innerHTML += `
         <div>
-            <h2>Welcome to my blog!</h2>
+            <h1>Welcome to my blog!</h1>
             <p class="welcome-text">${welcomeContent.content.rendered}</p>
             <p class="signature">John Doe</p>
         </div>

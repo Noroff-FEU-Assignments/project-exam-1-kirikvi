@@ -82,18 +82,23 @@
             <div class="index-post">
             </div>
             
-            <div class="button-container">
-                <a href="archive.html">Go to the archive >></a>
-            </div>
-
             <div class="comment-container">
                 <h2>Comments</h2>
-                <div class="comments"></div>
+
+                <div class="comments"><!--BUILT WITH JS--></div>
+                
+                <h2>Leave a comment</h3>
                 <form class="message-form">
-                    <input type="text" name="name" id="name" placeholder="Name or nickname">
-                    <textarea name="comment" type="text" id="comment" placeholder="Write your comment here"></textarea>
+                    <small></small>
+                    <input class="comment-form-input" type="text" name="name" id="name" placeholder="Name or nickname">
+                    <small></small>
+                    <textarea class="comment-form-input" name="comment" type="text" id="comment" placeholder="Write your comment here"></textarea>
                     <button class="message-submit">Submit</button>         
                 </form>  
+            </div>
+            
+            <div class="button-container">
+                <a href="archive.html">Go to the archive >></a>
             </div>
         </div>      
    </main>
@@ -104,5 +109,6 @@
 
    <script src="js/index.js"></script>
    <script src="js/carousel.js"></script>
+   <script src="js/comments.js"></script>
 </body>
 </html>
