@@ -695,6 +695,11 @@ footer p {
         width: 100%;
     }
 
+    .comment-container,
+    .index-welcome {
+        padding: 10px;
+    }
+
     /* CAROUSEL */
     .carousel-wrapper {
         height: 230px;
@@ -802,12 +807,13 @@ footer p {
 
     .wp-image-367 {
         width: 150px;
+        height: 187px;
     }
 
     .about-content img { 
         float: none;
         margin: 10px auto;
-        width: 100%
+        width: 100%;
     }
 
     .loader {
