@@ -78,7 +78,8 @@ button:hover,
 
 /*FONTS SIZES COLOURS*/
 h1,
-h2 {
+h2,
+.carousel-title {
     font-family: "objektiv-mk2", sans-serif;
     font-weight: 700;
     font-style: normal; 
@@ -346,6 +347,8 @@ footer p {
 }
 
 .carousel-title {
+    text-transform: uppercase;
+    text-decoration: none;
     font-size: 2rem;
     background: rgba(58, 64, 59, 0.7);
     color:#f7f7f7;
@@ -371,6 +374,10 @@ footer p {
 .carousel-title.title {
     padding: 5px 15px;
     bottom: 0px;
+}
+
+.carousel-title p {
+    text-transform: none;
 }
 
 /*COMMENTS*/
@@ -479,6 +486,12 @@ footer p {
     background-color: #f7f7f7;
 }
 
+.post-content p,
+.index-item p{
+    max-width: 800px;
+    margin: 20px auto;
+}
+
 .breadcrumbs {
     margin-bottom: 0;
 }
@@ -520,6 +533,16 @@ footer p {
     padding: 10px;
     width: 100%;
     border: none;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin:auto;
+}
+
+.contact-form input {
+    max-width: 50%;
+    margin: 10px 0;
 }
 
 .contact-form button{
@@ -775,6 +798,7 @@ footer p {
 /*BLOG POST ------------------------------------*/
     .post-content {
         padding: 0 20px 20px 20px;
+        max-width: 800px;
     }   
     
     .post-content h1 {
